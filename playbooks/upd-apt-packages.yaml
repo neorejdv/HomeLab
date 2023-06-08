@@ -1,5 +1,5 @@
 ---
-- hosts: NODES
+- hosts: all
 
   become: true
   tasks:
