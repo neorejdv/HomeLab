@@ -1,0 +1,12 @@
+---
+- hosts: NODES
+
+  become: true
+  tasks:
+    - name: disbale auto update packages
+      copy:
+       src: Files/disbale-20auto-upgrades
+       dest: /etc/apt/apt.conf.d/20auto-upgrades
+       owner: root
+       group: root
+       mode: 0440
